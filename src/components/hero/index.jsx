@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <div className={pathname === '/' ? "hero" : "bg-white py-[30px]"}>
       <div className="container">
-        <div className="flex justify-between items-center gap-3">
+        <div className="flex md:flex-row flex-col md:justify-between justify-center items-center gap-3">
           <NavLink to="/" className="text-2xl font-bold text-black">
             <img src={logo} className="logo w-[160px]" alt="" />
           </NavLink>

@@ -57,11 +57,11 @@ const DonationDetails = () => {
         ) : (
           <div className="pb-[100px]">
             <div className="holder relative rounded-[8px] overflow-hidden">
-              <img src={currentData.img} className="w-full" alt="" />
-              <div className="price-overlay absolute bg-[#0b0b0ba3] p-[35px] bottom-0 left-0 w-full">
+              <img src={currentData.img} className="w-full md:h-auto h-[400px] object-cover" alt="" />
+              <div className="price-overlay absolute bg-[#0b0b0ba3] md:p-[35px] p-[20px] bottom-0 left-0 w-full">
                 <button
                   onClick={handleDonate}
-                  className="text-white px-[26px] py-[16px] rounded-[4px] text-xl"
+                  className="text-white px-[26px] md:py-[16px] py-[8px] rounded-[4px] md:text-xl"
                   style={btnStyle}
                 >
                   Donate ${currentData.price}
@@ -69,7 +69,7 @@ const DonationDetails = () => {
               </div>
             </div>
 
-            <h1 className="mt-[40px] text-[40px] font-bold text-[#0B0B0B]">
+            <h1 className="mt-[40px] md:text-[40px] text-[24px] font-bold text-[#0B0B0B]">
               {currentData.title}
             </h1>
             <p className="text-lg">{currentData.description}</p>

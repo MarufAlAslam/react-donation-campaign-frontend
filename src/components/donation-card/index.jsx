@@ -28,14 +28,14 @@ const DonationCard = ({ item }) => {
         >
           {item.category}
         </span>
-        <p className="text-2xl mt-[8px] font-[600] text-[#0B0B0B]">
+        <p className="md:text-2xl text-lg mt-[8px] font-[600] text-[#0B0B0B]">
           {item.title}
         </p>
         <p className="font-[600]" style={titleStyle}>${item.price}</p>
 
-        <Link to={`/${item.id}`}>
+        <Link to={`/donation/${item.id}`}>
           <button
-            className="text-white px-[16px] py-[9px] rounded-[4px] text-lg mt-[16px]"
+            className="text-white px-[16px] py-[9px] rounded-[4px] md:text-lg mt-[16px]"
             style={btnStyle}
           >
             View Details

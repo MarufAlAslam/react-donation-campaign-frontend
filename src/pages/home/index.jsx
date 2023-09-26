@@ -18,7 +18,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="home py-[100px]">
+    <div className="home md:py-[100px] py-[30px]">
       <div className="container">
         <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-col-1 gap-6">
           {loading

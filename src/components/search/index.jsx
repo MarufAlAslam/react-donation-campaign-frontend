@@ -1,12 +1,12 @@
 const Search = () => {
   return (
-    <div className="search py-[120px]">
+    <div className="search md:py-[120px] py-[60px]">
       <div className="text-center">
-        <h1 className="lg:text-5xl text-3xl font-bold text-[#0B0B0B] mb-[40px]">
+        <h1 className="lg:text-5xl md:text-3xl text-xl font-bold text-[#0B0B0B] md:mb-[40px] mb-[20px]">
           I Grow By Helping People In Need
         </h1>
 
-        <form action="">
+        <form action="" className="flex justify-center items-center">
           <input
             type="text"
             placeholder="Search here..."
