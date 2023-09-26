@@ -1,18 +1,21 @@
 import { useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
 import Card from "../../components/card";
 
 const Home = () => {
-  const loaderData = useLoaderData();
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
-  console.log(loaderData);
+//   console.log(loaderData);
 
   useEffect(() => {
     setLoading(true);
-    setData(loaderData);
+    fetch("data.json")
+        .then((res) => res.json())
+        .then((data) => {
+            setData(data);
+            setLoading(false);
+        });
     setLoading(false);
-  }, [loaderData]);
+  }, []);
 
   return (
     <div className="home py-[100px]">

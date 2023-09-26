@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const DonationDetails = () => {
@@ -7,10 +7,11 @@ const DonationDetails = () => {
 
   const [currentData, setCurrentData] = useState({});
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setLoading(true);
-    fetch("data.json")
+    fetch("../../../data.json")
       .then((res) => res.json())
       .then((data) => {
         setCurrentData(data[id - 1]);
@@ -21,6 +22,7 @@ const DonationDetails = () => {
   const btnStyle = {
     backgroundColor: currentData.text_color,
   };
+ 
 
   const handleDonate = () => {
     
@@ -34,6 +36,7 @@ const DonationDetails = () => {
         parsedData.push(currentData);
         localStorage.setItem("donation", JSON.stringify(parsedData));
         toast.success("Donation Successfull!");
+        navigate("/donation");
       }
       else{
         toast.error("You already donated to this cause!")
@@ -42,6 +45,7 @@ const DonationDetails = () => {
     else{
         localStorage.setItem("donation", JSON.stringify([currentData]));
         toast.success("Donation Successfull!");
+        navigate("/donation");
     }
   };
 
