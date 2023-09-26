@@ -5,7 +5,6 @@ import Search from "../search";
 const Hero = () => {
   const location = useLocation();
   const { pathname } = location;
-  console.log(pathname);
   return (
     <div className={pathname === '/' ? "hero" : "bg-white py-[30px]"}>
       <div className="container">
