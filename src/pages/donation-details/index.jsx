@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
+import Loading from "../../components/loading";
 
 const DonationDetails = () => {
   const id = useParams().id;
@@ -53,7 +54,7 @@ const DonationDetails = () => {
     <div className="donation">
       <div className="container">
         {loading ? (
-          "loading..."
+          <Loading/>
         ) : (
           <div className="pb-[100px]">
             <div className="holder relative rounded-[8px] overflow-hidden">

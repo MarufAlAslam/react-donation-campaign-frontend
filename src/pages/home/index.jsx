@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Card from "../../components/card";
 import { useOutletContext } from "react-router-dom";
 import Failed from "../../components/failed";
+import Loading from "../../components/loading";
 
 const Home = () => {
   //   const [data, setData] = useState([]);
@@ -33,7 +34,7 @@ const Home = () => {
           </p>
           <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-col-1 gap-6">
             {loading
-              ? "loading..."
+              ? <Loading/>
               : outletData.map((item) => <Card key={item.id} item={item} />)}
           </div>
         </div>
