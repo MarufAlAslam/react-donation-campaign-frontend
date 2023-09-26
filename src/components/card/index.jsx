@@ -13,7 +13,7 @@ const Card = ({ item }) => {
     color: item.text_color,
   };
   return (
-    <Link to={`/donation/${item.id}`}>
+    <Link to={`/${item.id}`}>
       <div className="card h-full rounded-[8px] overflow-hidden" style={cardStyle}>
         <img src={item.img} alt="" />
         <div className="card-body p-[16px]">
