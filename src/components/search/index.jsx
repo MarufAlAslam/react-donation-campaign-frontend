@@ -7,14 +7,14 @@ const Search = ({handleSearch, handleChange}) => {
           I Grow By Helping People In Need
         </h1>
 
-        <form onSubmit={handleSearch} action="" className="flex justify-center items-center">
+        <form onSubmit={handleSearch} action="" className="flex justify-center items-center search">
           <input
             type="text"
             name="search"
             onChange={handleChange}
             required
             placeholder="Search here..."
-            className="border text-sm border-[#FF444A] rounded-l-[10px] py-[16px] px-[16px] w-[400px] focus:outline-none"
+            className="border text-sm border-[#FF444A] rounded-l-[10px] py-[16px] px-[16px] w-[400px] max-w-full focus:outline-none"
           />
           <input
             type="submit"

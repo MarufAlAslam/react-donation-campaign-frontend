@@ -3,7 +3,6 @@
 import { NavLink, useLocation } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
 import Search from "../search";
-import { toast } from "react-toastify";
 
 const Hero = ({ setOutletData }) => {
   const location = useLocation();
