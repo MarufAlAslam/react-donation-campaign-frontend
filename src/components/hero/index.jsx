@@ -1,10 +1,13 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
 import Search from "../search";
 
 const Hero = () => {
+  const location = useLocation();
+  const { pathname } = location;
+  console.log(pathname);
   return (
-    <div className="hero">
+    <div className={pathname === '/' ? "hero" : "bg-white py-[30px]"}>
       <div className="container">
         <div className="flex justify-between items-center gap-3">
           <NavLink to="/" className="text-2xl font-bold text-black">
@@ -23,7 +26,9 @@ const Hero = () => {
           </div>
         </div>
 
-        <Search/>
+        {
+            pathname === '/' && <Search/>
+        }
       </div>
     </div>
   );
