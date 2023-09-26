@@ -2,7 +2,7 @@ const Search = () => {
   return (
     <div className="search py-[120px]">
       <div className="text-center">
-        <h1 className="text-5xl font-bold text-[#0B0B0B] mb-[40px]">
+        <h1 className="lg:text-5xl text-3xl font-bold text-[#0B0B0B] mb-[40px]">
           I Grow By Helping People In Need
         </h1>
 
